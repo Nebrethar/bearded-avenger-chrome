@@ -42,7 +42,7 @@ CIF_CLIENT.sendToServer=function(data){
 
 $(document).ready(function() {
     // Setup the ajax indicator
-    $('#results').append('<div id="ajaxBusy"><p><img src="images/ajax-loader.gif"></p></div>');
+    $('#results').append('<div id="ajaxBusy"><p><img src="../images/ajax-loader.gif"></p></div>');
 
     $('#ajaxBusy').css({
         display:"none",
