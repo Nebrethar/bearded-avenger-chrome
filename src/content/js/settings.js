@@ -58,11 +58,11 @@ CIF_CLIENT.restore_options=function() {
 
 CIF_CLIENT.addProfileRow=function(name, url, key, groups, provider, isDefault, logQueries){
 	toappend='<tr class="profilerow">';
-	toappend+='<td><input type="text" class="nameinput form-control"  placeholder="Name"/></td>';
-	toappend+='<td><input type="text" class="urlinput form-control" placeholder="https://example.org" size="50"/></td>';
-	toappend+='<td><input type="text" class="keyinput form-control" placeholder="12341234" size="72"/></td>';
-	toappend+= '<td><input type="text" class="groupsinput form-control" placeholder="everyone,groupA,groupB" size="50"/></td>';
-	toappend+='<td><input type="text" class="providerinput form-control" placeholder="Organization (no spaces)" size="50"/></td>';
+	toappend+='<td><input type="text" class="nameinput form-control"  placeholder="Name" size="100"/></td>';
+	toappend+='<td><input type="text" class="urlinput form-control" placeholder="https://example.org" size="100"/></td>';
+	toappend+='<td><input type="text" class="keyinput form-control" placeholder="12341234" size="100"/></td>';
+	toappend+= '<td><input type="text" class="groupsinput form-control" placeholder="everyone,groupA,groupB" size="100"/></td>';
+	toappend+='<td><input type="text" class="providerinput form-control" placeholder="Organization (no spaces)" size="100"/></td>';
 
 	toappend+='<td><span class="aria-label">Default Server:</span> <input type="radio" class="defaultradioinput" name="isdefault" disabled/><br/>';
 	toappend+='<span class="aria-label">Log Queries:</span> <input type="checkbox" class="logqueriesinput" checked/></td>';
