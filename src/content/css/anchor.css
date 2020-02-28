@@ -1,4 +1,9 @@
-.small
+.actions_header
 {
-  width:1%;
+  min-width:230px;
+}
+.options_header
+{
+  max-width:150px;
+  min-width:130px;
 }
