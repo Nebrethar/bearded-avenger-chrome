@@ -14,8 +14,8 @@ This repository houses Version 3 of the CIF Browser Extension.
 * Disable any existing "CIF" clients, if necessary
 * Navigate to the [Chrome Extensions menu](chrome://extensions/)
 * Click "Load Unpacked"
-* Navigate to the src/ folder
-* Click "Select Folder"
+* Navigate to the folder where the repository was downloaded, and select the "src" folder.
+* Click "Select Folder" to load the manifest file.
 * The addon manifest is automatically loaded from the folder, and the addon is installed!
 
 

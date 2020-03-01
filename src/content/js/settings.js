@@ -66,7 +66,7 @@ CIF_CLIENT.addProfileRow=function(name, url, key, groups, provider, isDefault, l
 
 	toappend+='<td><span class="aria-label">Default Server:</span> <input type="radio" class="defaultradioinput" name="isdefault" disabled/><br/>';
 	toappend+='<span class="aria-label">Log Queries:</span> <input type="checkbox" class="logqueriesinput" checked/></td>';
-    toappend+='<td><button class="deletebutton btn btn-danger btn-small">Delete</button> ';
+    toappend+='<td><button class="deletebutton btn btn-danger btn-small" style="display:inline"> Delete</button> ';
     toappend+='<button class="testbutton btn btn-small btn-success">Test Connection</button></td>';
 	toappend+='</tr>';
 
