@@ -1,4 +1,9 @@
-.small
-{
-  width:1%;
+.homecol {
+  float: left;
+  width: 50%;
+}
+.homerow:after {
+  content: "";
+  display: table;
+  clear: both;
 }
