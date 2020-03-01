@@ -20,10 +20,13 @@
           </div>
           <div id="results"></div>
           <form class="form-horizontal" id="myform">
+
               <div class="form-group input-group-lg">
-                      <input class="form-control" type="text" placeholder="example.com" id="indicator" name="indicator">
+                  <label for="Domain"><Strong>Domain:<Strong/></label>
+                  <input class="form-control" type="text" placeholder="example.com" id="indicator" name="indicator">
               </div>
               <div class="form-group input-group-lg">
+                  <label for="Tags"><Strong>Tags:<Strong/></label>
                   <input class="form-control" type="text" name="tags" placeholder="scanner, ssh, tag3, tag4" list="tags">
                   <datalist id="tags">
                       <option value="phishing">
@@ -35,9 +38,11 @@
                   </datalist>
               </div>
               <div class="form-group input-group-lg">
+                  <label for="Description"><Strong>Description:<Strong/></label>
                   <input class="form-control" type="text" placeholder="short description" id="description" name="description">
               </div>
               <div class="form-group input-group-lg">
+                  <label for="Protocol"><Strong>Protocol:<Strong/></label>
                   <select class="form-control" id="protocol" name="protocol">
                       <option selected="1" value="tcp">TCP</option>
                       <option value="tcp">UDP</option>
@@ -45,12 +50,15 @@
                   </select>
               </div>
               <div class="form-group input-group-lg">
-                  <input class="form-control" type="text" placeholder="Ports (21,23-25)" id="portlist" name="portlist">
+                  <label for="Ports"><Strong>Ports:<Strong/></label>
+                  <input class="form-control" type="text" placeholder="Single(21) or Range(23-25)" id="portlist" name="portlist">
               </div>
               <div class="form-group input-group-lg">
+                  <label for="Provider"><Strong>Provider:<Strong/></label>
                   <input class="form-control" type="text" placeholder="https://csirtg.io/users/csirtgadgets/feeds/port-scanners/indicators/13013" id="altid" name="altid">
               </div>
               <div class="form-group input-group-lg">
+                  <label for="Severity"><Strong>Severity:<Strong/></label>
                   <select class="form-control" id="tlp" name="tlp">
                       <option selected="1" value="amber">AMBER</option>
                       <option value="red">RED</option>
@@ -59,13 +67,17 @@
                   </select>
               </div>
               <div class="form-group input-group-lg">
+                  <label for="Confidence"><Strong>Confidence Level:<Strong/></label>
                   <select class="form-control" id="confidence" name="confidence">
-                      <option selected="1" value="7">Somewhat Confident - 7</option>
-                      <option value="8">Very Confident - 8</option>
-                      <option value="9">Certain - 9</option>
+                    <option selected="1" value="1">Uncertain - 1</option>
+                        <option value="2">Not Confident - 2</option>
+                        <option value="3">Somewhat Confident - 3</option>
+                        <option value="4">Very Confident - 4</option>
+                        <option value="5">Certain - 5</option>
                   </select>
               </div>
               <div class="form-group input-group-lg">
+                  <label for="Group"><Strong> Threat Group:<Strong/></label> 
                   <select class="form-control" id="group" name="group">
 
                   </select>
