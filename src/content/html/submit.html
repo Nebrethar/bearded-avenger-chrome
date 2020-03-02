@@ -20,14 +20,16 @@
           </div>
           <div id="results"></div>
           <form class="form-horizontal" id="myform">
-
+              <h4 style="text-align:right;">Hover over the input boxes for more details</h4>
               <div class="form-group input-group-lg">
                   <label for="Domain"><Strong>Domain:<Strong/></label>
-                  <input class="form-control" type="text" placeholder="example.com" id="indicator" name="indicator">
+                  <input class="form-control" type="text" placeholder="example.com" id="indicator" name="indicator"
+                  title="Domain name or IPv4 address">
               </div>
               <div class="form-group input-group-lg">
                   <label for="Tags"><Strong>Tags:<Strong/></label>
-                  <input class="form-control" type="text" name="tags" placeholder="scanner, ssh, tag3, tag4" list="tags">
+                  <input class="form-control" type="text" name="tags" placeholder="scanner, ssh, tag3, tag4" list="tags"
+                  title="Set manually in the submission process to classify threats">
                   <datalist id="tags">
                       <option value="phishing">
                       <option value="malware">
@@ -39,11 +41,13 @@
               </div>
               <div class="form-group input-group-lg">
                   <label for="Description"><Strong>Description:<Strong/></label>
-                  <input class="form-control" type="text" placeholder="short description" id="description" name="description">
+                  <input class="form-control" type="text" placeholder="short description" id="description" name="description"
+                  title="Explanation of the threat and reason for action">
               </div>
               <div class="form-group input-group-lg">
                   <label for="Protocol"><Strong>Protocol:<Strong/></label>
-                  <select class="form-control" id="protocol" name="protocol">
+                  <select class="form-control" id="protocol" name="protocol"
+                  title="Protocol used by threat (TCP, UDP, or ICMP)">
                       <option selected="1" value="tcp">TCP</option>
                       <option value="tcp">UDP</option>
                       <option value="tcp">ICMP</option>
@@ -51,15 +55,18 @@
               </div>
               <div class="form-group input-group-lg">
                   <label for="Ports"><Strong>Ports:<Strong/></label>
-                  <input class="form-control" type="text" placeholder="Single(21) or Range(23-25)" id="portlist" name="portlist">
+                  <input class="form-control" type="text" placeholder="Single(21) or Range(23-25)" id="portlist" name="portlist"
+                  title="Single port, or a range of ports, used by threat source">
               </div>
               <div class="form-group input-group-lg">
                   <label for="Provider"><Strong>Provider:<Strong/></label>
-                  <input class="form-control" type="text" placeholder="https://csirtg.io/users/csirtgadgets/feeds/port-scanners/indicators/13013" id="altid" name="altid">
+                  <input class="form-control" type="text" placeholder="https://csirtg.io/users/csirtgadgets/feeds/port-scanners/indicators/13013" id="altid" name="altid"
+                  title="Organizational source of the submission (URL)">
               </div>
               <div class="form-group input-group-lg">
                   <label for="Severity"><Strong>Severity:<Strong/></label>
-                  <select class="form-control" id="tlp" name="tlp">
+                  <select class="form-control" id="tlp" name="tlp"
+                  title="In order from least severe to most severe:   (WHITE, GREEN, AMBER, RED)">
                       <option selected="1" value="amber">AMBER</option>
                       <option value="red">RED</option>
                       <option value="green">GREEN</option>
@@ -68,7 +75,8 @@
               </div>
               <div class="form-group input-group-lg">
                   <label for="Confidence"><Strong>Confidence Level:<Strong/></label>
-                  <select class="form-control" id="confidence" name="confidence">
+                  <select class="form-control" id="confidence" name="confidence"
+                  title="Submitter's confidence in the validity of the submission (x-10)">
                     <option selected="1" value="1">Uncertain - 1</option>
                         <option value="2">Not Confident - 2</option>
                         <option value="3">Somewhat Confident - 3</option>
@@ -77,8 +85,8 @@
                   </select>
               </div>
               <div class="form-group input-group-lg">
-                  <label for="Group"><Strong> Threat Group:<Strong/></label> 
-                  <select class="form-control" id="group" name="group">
+                  <label for="Group"><Strong> Threat Group:<Strong/></label>
+                  <select class="form-control" id="group" name="group" title="Associated threat group">
 
                   </select>
               </div>
