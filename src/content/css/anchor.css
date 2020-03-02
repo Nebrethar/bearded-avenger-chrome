@@ -28,3 +28,7 @@ input, select, table
 {
   font-weight: 600 !important;
 }
+.left-col
+{
+  padding-right:5%;
+}
