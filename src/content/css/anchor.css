@@ -14,7 +14,7 @@
 .options_header
 {
   max-width:150px;
-  min-width:130px;
+  min-width:150px;
 }
 .descriptor
 {
@@ -23,4 +23,8 @@
 .rightb
 {
 border-right: 1px solid black;
+}
+input, select, table
+{
+  font-weight: 600 !important;
 }
