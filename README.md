@@ -4,7 +4,7 @@ This repository houses Version 3 of the CIF Browser Extension.
 
 # Requirements
 
-* Chrome Browser (Any recent version with addon support)
+* Chrome Browser (Any recent version with addon support) <br/>
   Download [Here](https://www.google.com/chrome/)
 * API Credentials for CIF Server
   * Please contact the CIF Development Team to set this up
