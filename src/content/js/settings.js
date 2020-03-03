@@ -58,7 +58,7 @@ CIF_CLIENT.restore_options=function() {
 
 CIF_CLIENT.addProfileRow=function(name, url, key, groups, provider, isDefault, logQueries){
 	toappend='<tr class="profilerow">';
-	toappend+='<td><input title="Personal identifier for the connection" type="text" class="nameinput form-control"  placeholder="https://www.example.com" size="100"/></td>';
+	toappend+='<td><input title="Username on the specified server" type="text" class="nameinput form-control"  placeholder="Username" size="100"/></td>';
 	toappend+='<td><input title="Destination in URL format" type="text" class="urlinput form-control" placeholder="https://example.org" size="100"/></td>';
 	toappend+='<td><input title="Token provided by CIF backend" type="text" class="keyinput form-control" placeholder="12341234" size="100"/></td>';
 	toappend+= '<td><input title="Connection group for organization" type="text" class="groupsinput form-control" placeholder="everyone,groupA,groupB" size="100"/></td>';
