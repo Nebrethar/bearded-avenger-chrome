@@ -10,6 +10,7 @@ CIF_CLIENT.sendToServer=function(data){
     }
 
     function fail(xhr, textStatus, error) {
+        console.log(xhr.responseJSON);
         html = "<div class='alert alert-danger'>Failed: <b>" + error + "</b></div>";
         switch(xhr['status']) {
             case 500:
@@ -82,8 +83,12 @@ $(document).ready(function() {
     }
 
     $("#myform").submit(function (event) {
-        event.preventDefault();
         var fields = $("#myform").serializeArray();
+        var r=confirm("Fields: " + fields);
+        if (r==true)
+        {
+        x="You pressed OK!";
+        event.preventDefault();
         var data = {};
         for (var i in fields) {
             console.log(fields[i].name);
@@ -94,7 +99,11 @@ $(document).ready(function() {
 
         console.log(JSON.stringify(data))
         CIF_CLIENT.sendToServer(data);
-
+        }
+        else
+        {
+        x="You pressed Cancel!";
+        }
         // turn this into a checkbox?
         //$("#myform").find('input:text').val(''); clear the form
     });

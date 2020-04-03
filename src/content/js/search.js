@@ -104,6 +104,8 @@ search = function(data, nolog) {
     }
 
     function fail(xhr, textStatus, error) {
+        console.log("FAIL");
+        console.log(xhr.responseJSON['data']);
         delay = 5000;
         html = "<div class='alert alert-danger'>Test Connection Failed: <b>" + error + "</b></div>";
         switch(xhr['status']) {

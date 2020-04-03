@@ -4,7 +4,7 @@ var CIFSDK = {
             xhr.setRequestHeader('Authorization', 'Token token=' + args.token);
             xhr.setRequestHeader('Accept', 'application/vnd.cif.v3+json');
         }
-        $.ajax({
+        var xh = $.ajax({
             url: args.remote,
             type: 'GET',
             dataType: 'json',
@@ -13,6 +13,7 @@ var CIFSDK = {
             beforeSend: setHeaders,
             cache: args.cache || false
         });
+        console.log(xh);
     },
 
     post: function(args) {
@@ -51,6 +52,8 @@ var CIFSDK = {
         }
         args.remote = args.remote.substr(0, args.remote.length - 1);
         console.log(args.remote)
-        this.get(args);
+        console.log("test")
+        console.log(args)
+        console.log(this.get(args));
     }
 };
