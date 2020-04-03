@@ -87,23 +87,19 @@ $(document).ready(function() {
         var r=confirm("Fields: " + fields);
         if (r==true)
         {
-        x="You pressed OK!";
-        event.preventDefault();
-        var data = {};
-        for (var i in fields) {
-            console.log(fields[i].name);
-            data[fields[i].name] = fields[i].value;
-        }
+          event.preventDefault();
+            var data = {};
+            for (var i in fields) {
+                console.log(fields[i].name);
+                data[fields[i].name] = fields[i].value;
+          }
 
-        data["provider"] = provider
+          data["provider"] = provider
 
-        console.log(JSON.stringify(data))
-        CIF_CLIENT.sendToServer(data);
+          console.log(JSON.stringify(data))
+          CIF_CLIENT.sendToServer(data);
         }
-        else
-        {
-        x="You pressed Cancel!";
-        }
+        // Can put an ELSE here
         // turn this into a checkbox?
         //$("#myform").find('input:text').val(''); clear the form
     });
