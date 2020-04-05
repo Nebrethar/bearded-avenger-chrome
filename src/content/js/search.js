@@ -50,21 +50,6 @@ search = function(data, nolog) {
             }
             t.fnClearTable();
             for (var i in result){
-                var protocol = result[i].protocol;
-                switch(protocol) {
-                    case 0:
-                        protocol = 'icmp';
-                        break;
-                    case 6:
-                        protocol = 'tcp';
-                        break;
-                    case 17:
-                        protocl = 'udp';
-                        break;
-                    default:
-                        protocol = '';
-                }
-
                 var tlp = result[i].tlp
                 switch(tlp){
                     case 'red':
@@ -93,27 +78,27 @@ search = function(data, nolog) {
                 {
                   console.log("All confidence")
                   t.fnAddData([
-                      result[i].reporttime,
+                      result[i].reported_at,
                       result[i].group,
-                      tlp,
-                      indicator,
+                      result[i].tlp,
+                      result[i].indicator,
                       result[i].provider || '',
                       result[i].tags,
-                      protocol || '',
-                      result[i].portlist || '',
+                      result[i].itype || '',
+                      result[i].count || '',
 
                   ]);
                 } else {
                   t.fnAddData([
-                      result[i].reporttime,
+                      result[i].reported_at,
                       result[i].group,
-                      tlp,
-                      indicator,
+                      result[i].tlp,
+                      result[i].indicator,
                       result[i].provider || '',
                       result[i].tags,
                       result[i].confidence,
-                      protocol || '',
-                      result[i].portlist || '',
+                      result[i].itype || '',
+                      result[i].count || '',
 
                   ]);
                 }
