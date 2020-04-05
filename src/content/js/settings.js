@@ -114,6 +114,7 @@ CIF_CLIENT.addProfileRow=function(name, url, key, groups, provider, isDefault, l
 
 CIF_CLIENT.test_settings=function(clickedbutton){
 	var remote=$(".urlinput",clickedbutton.parent().parent()).val().trim();
+  console.log("REMOTE: " + remote)
 	var uri="/ping";
 	var token=$(".keyinput",clickedbutton.parent().parent()).val().trim();
 

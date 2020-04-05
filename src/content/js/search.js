@@ -33,9 +33,11 @@ search = function(data, nolog) {
     }
 
     function success(data, textStatus, xhr) {
+      console.log("XHR");
+      console.log(xhr);
         //$("#results").html("<div class='alert alert-success'>Test Connection Successful.</div>").show().delay(2000).fadeOut('slow');
         //$('#results').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>' );
-        console.log(xhr.responseJSON['data']);
+        console.log(xhr.responseJSON);
         if (xhr.responseJSON['data'] != '{}') {
             var result = [];
             try{
@@ -44,7 +46,7 @@ search = function(data, nolog) {
                 result.push(rresult[i]['_source'])
               }
             } catch {
-                result = xhr.responseJSON['data'];
+                result = xhr.responseJSON;
             }
             t.fnClearTable();
             for (var i in result){
@@ -86,19 +88,35 @@ search = function(data, nolog) {
                     indicator = '<a href="' + result[i].altid + '">' + indicator + '</a>'
                 }
 
+                console.log(result[i].confidence)
+                if (result[i].confidence == '11')
+                {
+                  console.log("All confidence")
+                  t.fnAddData([
+                      result[i].reporttime,
+                      result[i].group,
+                      tlp,
+                      indicator,
+                      result[i].provider || '',
+                      result[i].tags,
+                      protocol || '',
+                      result[i].portlist || '',
 
-                t.fnAddData([
-                    result[i].reporttime,
-                    result[i].group,
-                    tlp,
-                    indicator,
-                    result[i].provider || '',
-                    result[i].tags,
-                    result[i].confidence,
-                    protocol || '',
-                    result[i].portlist || '',
+                  ]);
+                } else {
+                  t.fnAddData([
+                      result[i].reporttime,
+                      result[i].group,
+                      tlp,
+                      indicator,
+                      result[i].provider || '',
+                      result[i].tags,
+                      result[i].confidence,
+                      protocol || '',
+                      result[i].portlist || '',
 
-                ]);
+                  ]);
+                }
             }
         }
     }
@@ -190,7 +208,17 @@ $(document).ready(function() {
         data = {}
         for (var i in fields) {
           if (fields[i].name != "results_length" && fields[i].value != ""){
-            data[fields[i].name] = fields[i].value;
+          if (fields[i].name == "confidence")
+          {
+            if (fields[i].value != '11')
+            {
+              data[fields[i].name] = fields[i].value;
+            } else {
+              console.log("Confidence All");
+            }
+          } else {
+              data[fields[i].name] = fields[i].value;
+            }
           }
         }
         console.log(data)

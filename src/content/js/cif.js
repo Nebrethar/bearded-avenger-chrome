@@ -1,10 +1,11 @@
 var CIFSDK = {
     get: function(args) {
         function setHeaders (xhr) {
-            xhr.setRequestHeader('Authorization', 'Token token=' + args.token);
+            xhr.setRequestHeader('Authorization', args.token);
             xhr.setRequestHeader('Accept', 'application/vnd.cif.v3+json');
         }
-        var xh = $.ajax({
+        console.log(args.remote)
+        xhg = $.ajax({
             url: args.remote,
             type: 'GET',
             dataType: 'json',
@@ -13,7 +14,8 @@ var CIFSDK = {
             beforeSend: setHeaders,
             cache: args.cache || false
         });
-        console.log(xh);
+        console.log(xhg);
+
     },
 
     post: function(args) {
@@ -22,7 +24,7 @@ var CIFSDK = {
             xhr.setRequestHeader('Accept', 'application/vnd.cif.v3+json');
         }
 
-        $.ajax({
+        chg = $.ajax({
             url: args.remote,
             type: 'POST',
             dataType: 'json',
@@ -32,21 +34,27 @@ var CIFSDK = {
             beforeSend: setHeaders,
             data: JSON.stringify(args.data)
         });
+        consolke.log(xhg)
     },
 
     ping: function(args) {
-        args.remote = args.remote + '/ping';
+        args.remote = args.remote + 'ping/';
         this.get(args);
     },
 
     submit: function(args) {
-        args.remote = args.remote + '/indicators';
+        args.remote = args.remote + 'indicators/?itype=ipv4&';
+        console.log(args.remote)
+        console.log("test")
+        console.log(args)
+        this.get(args);
+        console.log(args.data)
         this.post(args);
     },
 
     search: function(args) {
         console.log(args)
-        args.remote = args.remote + '/indicators?';
+        args.remote = args.remote + 'indicators/?itype=ipv4&';
         for (var i in args.data) {
                args.remote += i + '=' + args.data[i] + '&';
         }
@@ -54,6 +62,7 @@ var CIFSDK = {
         console.log(args.remote)
         console.log("test")
         console.log(args)
-        console.log(this.get(args));
+        this.get(args);
+        console.log(args.data)
     }
 };
