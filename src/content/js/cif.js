@@ -61,7 +61,13 @@ var CIFSDK = {
         console.log(args)
         args.remote = args.remote + '/indicators/?';
         for (var i in args.data) {
-               args.remote += i + '=' + args.data[i] + '&';
+               if (i == 'itype') {
+                  if (args.data[i] != 'any') {
+                    args.remote += i + '=' + args.data[i] + '&';
+                  }
+               } else {
+                  args.remote += i + '=' + args.data[i] + '&';
+               }
         }
         args.remote = args.remote.substr(0, args.remote.length - 1);
         console.log(args.remote)
