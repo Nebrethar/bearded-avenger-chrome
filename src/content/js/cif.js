@@ -20,10 +20,12 @@ var CIFSDK = {
 
     post: function(args) {
         function setHeaders(xhr) {
-            xhr.setRequestHeader('Authorization', 'Token token=' + args.token);
+            xhr.setRequestHeader('Authorization', args.token);
             xhr.setRequestHeader('Accept', 'application/vnd.cif.v3+json');
         }
-
+        console.log(JSON.stringify(args.data))
+        console.log("REMOTE")
+        console.log(args.remote)
         chg = $.ajax({
             url: args.remote,
             type: 'POST',
@@ -34,16 +36,19 @@ var CIFSDK = {
             beforeSend: setHeaders,
             data: JSON.stringify(args.data)
         });
-        consolke.log(xhg)
+        console.log(xhg)
     },
 
     ping: function(args) {
-        args.remote = args.remote + 'ping/';
+        args.remote = args.remote + '/ping/';
         this.get(args);
     },
 
     submit: function(args) {
-        args.remote = args.remote + 'indicators/?itype=ipv4&';
+        args.remote = args.remote + '/indicators/?';
+        for (var i in args.data) {
+               args.remote += i + '=' + args.data[i] + '&';
+        }
         console.log(args.remote)
         console.log("test")
         console.log(args)
@@ -54,7 +59,7 @@ var CIFSDK = {
 
     search: function(args) {
         console.log(args)
-        args.remote = args.remote + 'indicators/?itype=ipv4&';
+        args.remote = args.remote + '/indicators/?';
         for (var i in args.data) {
                args.remote += i + '=' + args.data[i] + '&';
         }

@@ -45,22 +45,23 @@
                   title="Explanation of the threat and reason for action">
               </div>
               <div class="form-group input-group-lg">
-                  <label for="Protocol"><Strong>Protocol:<Strong/></label>
-                  <select class="form-control" id="protocol" name="protocol"
-                  title="Protocol used by threat (TCP, UDP, or ICMP)">
-                      <option selected="1" value="tcp">TCP</option>
-                      <option value="tcp">UDP</option>
-                      <option value="tcp">ICMP</option>
+                  <label for="IP Version"><Strong>Protocol:<Strong/></label>
+                  <select class="form-control" id="itype" name="itype"
+                  title="IP type used by threat (ipv4 or ipv6)">
+                      <option selected="1" value="ipv4">ipv4</option>
+                      <option value="ipv6">ipv6</option>
                   </select>
               </div>
+              <!--
               <div class="form-group input-group-lg">
                   <label for="Ports"><Strong>Ports:<Strong/></label>
                   <input class="form-control" type="text" placeholder="Single(21) or Range(23-25)" id="portlist" name="portlist"
                   title="Single port, or a range of ports, used by threat source">
               </div>
+              -->
               <div class="form-group input-group-lg">
                   <label for="Provider"><Strong>Provider:<Strong/></label>
-                  <input class="form-control" type="text" placeholder="https://csirtg.io/users/csirtgadgets/feeds/port-scanners/indicators/13013" id="altid" name="altid"
+                  <input class="form-control" type="text" placeholder="https://csirtg.io/users/csirtgadgets/feeds/port-scanners/indicators/13013" id="provider" name="provider"
                   title="Organizational source of the submission (URL)">
               </div>
               <div class="form-group input-group-lg">
@@ -77,8 +78,7 @@
                   <label for="Confidence"><Strong>Confidence Level:<Strong/></label>
                   <select class="form-control" id="confidence" name="confidence"
                   title="Submitter's confidence in the validity of the submission (0-10)">
-                    <option selected="1" value="0">0 - Uncertain</option>
-                        <option value="1">1 - Not Confident</option>
+                        <option selected="1" value="1">1 - Not Confident</option>
                         <option value="2">2 - Somewhat Confident</option>
                         <option value="3">3 - Very Confident</option>
                         <option value="4">4 - Certain</option>

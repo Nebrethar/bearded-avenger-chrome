@@ -86,7 +86,6 @@ search = function(data, nolog) {
                       result[i].tags,
                       result[i].itype || '',
                       result[i].count || '',
-
                   ]);
                 } else {
                   t.fnAddData([
