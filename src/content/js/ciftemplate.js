@@ -26,8 +26,8 @@ document.getElementById("template").innerHTML = `
             <div id="navbar" class="navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="submit.html"` + document.getElementById("target").innerHTML + `>Submit</a></li>
-                    <li><a href="settings.html"` + document.getElementById("target").innerHTML + `>Settings</a></li>
                     <li><a href="search.html"` + document.getElementById("target").innerHTML + `>Search</a><li>
+                    <li><a href="settings.html"` + document.getElementById("target").innerHTML + `>Settings</a></li>
                 </ul>
             </div>
         </nav>

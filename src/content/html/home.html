@@ -20,15 +20,15 @@
   <div class="homerow">
     <div class="homecol left-col">
       <h1>
-        <strong>Bearded Avenger Chrome</strong>
+        Verbose Robot Chrome
       </h1>
       <h4><br>
-        Welcome to the homepage of the Bearded Avenger Chrome Extension<br><br>
+        Welcome to the homepage of the Verbose Robot Chrome Extension.<br><br>
         Refer to Page Descriptions on the right for detailed information on using this extension.<br><br>
         Please check out the links below if you'd like to know more about our project!
       </h4>
       <h1>
-        <strong>License and Copyright</strong>
+        License and Copyright
       </h1>
       <h4><br>
         Collective Intelligence Framework (CIF) is Copyright (C) 2017 the CSIRT Gadgets Foundation
@@ -36,19 +36,16 @@
         Free use of this software is granted under the terms of the Mozilla Public License Version 2.0 (MPL2). For details see the file LICENSE included with the distribution.
       </h4>
       <h1>
-        <strong>Related Links</strong>
+        Related Links
       </h1>
       <div class="homerow">
         <div class="homecol">
           <h4><br>
-            <a href="https://github.com/Nebrethar/bearded-avenger-chrome">
-              Github Repository (Current Version)
+            <a href="https://github.com/Nebrethar/verbose-robot-chrome">
+              Github Repository (v4)
             </a><br><br>
             <a href="https://csirtgadgets.com/collective-intelligence-framework">
-              CIFv3 Webpage
-            </a><br><br>
-            <a href="https://github.com/csirtgadgets/bearded-avenger-chrome/releases">
-              Official Releases (v3)
+              CIF Webpage
             </a>
           </h4>
         </div>
@@ -58,64 +55,76 @@
               Official Github Repository (v3)
             </a><br><br>
             <a href="https://chrome.google.com/webstore/detail/bearded-avenger-client-ci/ggapdokcabjlmadcloapikhofcpkaocg?hl=en-US">
-              Chrome Extension Page
-            </a><br><br>
-            <a href="https://readthedocs.org/projects/bearded-avenger/">
-              Additional Documentation
+              Chrome Extension Page (v3)
             </a>
           </h4>
         </div>
+        <br><br>  <br>
+        <h1>
+          <br>Fields
+        </h1>
+        <h4><br>
+          <div class="homerow">
+            The CIF databsae fields are used to submit and view data in the CIF database.
+            <br>
+            <strong>Each field has a unique function, explained here:</strong><br><br>
+            <div class="homecol" style="width:20%;">
+              <h4 class="descriptor"><strong>Domain:</strong> </h4>
+              <h4 class="descriptor"><strong>Tags:</strong> </h4>
+              <h4 class="descriptor"><strong>Description:</strong> </h4>
+              <h4 class="descriptor"><strong>Protocol:</strong> </h4>
+              <h4 class="descriptor"><strong>Provider:</strong> </h4>
+              <h4 class="descriptor"><strong>Severity:</strong><br><br></h4>
+              <h4 class="descriptor"><strong>Confidence:</strong></h4>
+              <h4 class="" style="margin-bottom:0px;"><strong>Threat Group:</strong><br><br> </h4>
+              <h4 class="descriptor" style="margin-top:0px;"><strong>NOTE:</strong></h4>
+            </div>
+            <div class="homecol">
+              <h4 class="descriptor rightb">Domain name or IPv4 address</h4>
+              <h4 class="descriptor rightb">Set manually in the submission process to classify threats </h4>
+              <h4 class="descriptor rightb">Explanation of the threat and reason for action </h4>
+              <h4 class="descriptor rightb">itype used by threat (IPv4 or IPv6) </h4>
+              <h4 class="descriptor rightb">Organizational source of the submission (URL) </h4>
+              <h4 class="descriptor rightb">In order from least severe to most severe:<br>(WHITE, GREEN, AMBER, RED) </h4>
+              <h4 class="descriptor rightb">Submitter's confidence in the validity of the submission (1-4) </h4>
+              <h4 class="rightb" style="margin-bottom:0px;">Associated threat group<br><br> </h4>
+              <h4 class="descriptor rightb" style="margin-top:0px;">If no database connections are defined, the GROUP box will be empty. </h4>
+            </div>
+          </div>
+        </h4>
       </div>
     </div>
     <div class="homecol">
       <h1>
-        <strong>Page Descriptions</strong>
+        Page Descriptions
       </h1>
       <h4><br>
-        Below is a list of pages used in the CIF Chrome Extension. Each item includes a description of the purtpose, function, and intended use of each page.
+        Below is a list of pages used in the CIF Chrome Extension. <br>
+        Each item includes a description of the purpose, function, and intended use of each page.<br>
       </h4>
       <h2>
-        <strong>Submit</strong>
+        Submit
       </h2>
-      <h4><br>
-        <div class="homerow">
-          Submit is used to create entries in the CIF database. Each field has a unique function, explained here:<br><br>
-          <div class="homecol" style="width:20%;">
-            <h4 class="descriptor"><strong>Domain:</strong> </h4>
-            <h4 class="descriptor"><strong>Tags:</strong> </h4>
-            <h4 class="descriptor"><strong>(Short) Description:</strong> </h4>
-            <h4 class="descriptor"><strong>Protocol:</strong> </h4>
-            <h4 class="descriptor"><strong>Port:</strong> </h4>
-            <h4 class="descriptor"><strong>Provider:</strong> </h4>
-            <h4 class="descriptor"><br><strong>Severity:</strong> </h4>
-            <h4 class="descriptor"><br><strong>Confidence Level:</strong></h4>
-            <h4 class="" style="margin-bottom:0px;"><strong>Group:</strong><br><br><br> </h4>
-            <h4 class="descriptor" style="margin-top:0px;"><strong>NOTE:</strong></h4>
-          </div>
-          <div class="homecol">
-            <h4 class="descriptor rightb">Domain name or IPv4 address </h4>
-            <h4 class="descriptor rightb">Set manually in the submission process to classify threats </h4>
-            <h4 class="descriptor rightb">Explanation of the threat and reason for action </h4>
-            <h4 class="descriptor rightb">Protocol used by threat (TCP, UDP, or ICMP) </h4>
-            <h4 class="descriptor rightb">Single port, or a range of ports, used by threat source </h4>
-            <h4 class="descriptor rightb">Organizational source of the submission (URL) </h4>
-            <h4 class="descriptor rightb">In order from least severe to most severe:   (WHITE, GREEN, AMBER, RED) </h4>
-            <h4 class="descriptor rightb">Submitter's confidence in the validity of the submission (x-10) </h4>
-            <h4 class="rightb" style="margin-bottom:0px;">Associated threat group<br><br> </h4>
-            <h4 class="descriptor rightb" style="margin-top:0px;">If no threat groups are defined, the GROUP box will be empty. </h4>
-          </div>
-        </div>
+      <h4>
+        Submitting entries to the database is the core function of the CIF chrome extension.<br><br>
+        <strong>Fields used to submit your data are described in the "Fields" section of this webpage.</strong><br><br>
+        If you make a mistake and attempt to submit data with the mistake, the page will confirm that you want to submit that data as-is.<br>
+        You can always press "cancel" to go back.
       </h4>
       <h2>
-        <strong>Settings</strong>
+        Settings
       </h2>
       <h4><br>
-        The settings page will allow the user to add or delete connection profiles for a CIF Backend. The user may also test the connection and connect to multiple sources if desired. <br><br>
-        Connecting to a server requires certain information from the user. Below is a detailed explanation for each required field.<br><br>
+        The settings page will allow the user to add or delete connection profiles for a CIF Backend.
+        <br>The user may also test the connection and connect to multiple sources if desired. <br><br>
+        Connecting to a server requires certain information from the server.
+        <br>These values include an a username, a domain, and an API token.<br>
+        Group and Provider are not mandatory, but may help narrow down search results in the future.
+        <br><br>
+        Below is a detailed explanation for each required field.<br><br>
       </h4>
       <h4>
         <div class="homerow">
-          Submit is used to create entries in the CIF database. Each field has a unique function, explained here:<br><br>
           <div class="homecol" style="width:20%;">
             <h4 class="descriptor"><strong>Name:</strong> </h4>
             <h4 class="descriptor"><strong>API Location:</strong> </h4>
@@ -132,10 +141,23 @@
         </div>
       </h4>
       <h2>
-        <strong>Search</strong>
+        Search
       </h2>
-      <h4><br>
-        <i>The Search page is currently being updated. Check back soon!</i>
+      <h4>
+        <div class="homerow">
+            The Search page is used to find entries that have already been submitted to the database.<br>
+            the field "tags" will retrieve the most values, while "domain" can find an exact IP.
+            <br><br>
+            Two additional fields exist for the Search page:
+            <br><br>
+            <div class="homecol" style="width:20%;">
+            <h4 class="descriptor"><strong>Timestamp:</strong> </h4>
+            <h4 class="descriptor"><strong>Count:</strong> </h4>
+          </div>
+          <div class="homecol">
+            <h4 class="descriptor rightb">Date and time of data submission</h4>
+            <h4 class="descriptor rightb">Number of occurrences in the database</h4>
+        </div>
       </h4>
       <br><br>
       </div>
