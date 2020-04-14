@@ -84,7 +84,7 @@ $(document).ready(function() {
 
     $("#myform").submit(function (event) {
         var fields = $("#myform").serializeArray();
-        var r=confirm("Fields: " + fields);
+        var r=confirm("Are you sure you want to submit " + fields[0].value + " to the database at severity " + fields[5].value.toUpperCase() + "?");
         if (r==true)
         {
           event.preventDefault();
