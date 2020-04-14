@@ -31,12 +31,13 @@
                         <input type="text" placeholder="Tags" class="form-control" name="tags" id="tags">
                         <input type="date" class="form-control" name="reporttime">
                     </div>
-                    <select class="form-control" id="itype" name="itype"
-                    title="IP type used by threat (ipv4 or ipv6)">
-                        <option selected="1" value="any">No itype</option>
-                        <option value="ipv4">ipv4</option>
-                        <option value="ipv6">ipv6</option>
-                    </select>
+                    <radio id="itype" name="itype" title="IP type used by threat (ipv4, ipv6 or any for all).">
+                        <br>
+                        <input type="radio" name="itype" value="any" checked> Any IP<br>
+                        <input type="radio" name="itype" value="ipv4"> IPv4<br>
+                        <input type="radio" name="itype" value="ipv6"> IPv6<br>
+                      </radio>
+                    
                     <button class="btn btn-default" id="btnSearch">Search</button>
                 </form>
   <div class="row">
