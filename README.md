@@ -1,6 +1,6 @@
-# Chrome Client for Bearded Avenger (CIFv3)
+# Chrome Client for Verbose Robot (CIFv3)
 
-This repository houses Version 3 of the CIF Browser Extension.
+This repository houses Version 4 of the CIF Browser Extension.
 
 # Requirements
 
