@@ -1,4 +1,4 @@
-# Chrome Client for Verbose Robot (CIFv3)
+# Chrome Client for Verbose Robot (CIFv4)
 
 This repository houses Version 4 of the CIF Browser Extension.
 
