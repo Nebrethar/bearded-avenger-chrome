@@ -13,6 +13,9 @@ document.getElementById("template").innerHTML = `
         <link rel="stylesheet" href="../css/bootstrap-3.3.2.min.css">
         <link rel="stylesheet" href="../css/bootstrap-theme-3.2.2.min.css">
         <link rel="stylesheet" href="../css/anchor.css">
+        <script src="../js/common.js"></script>
+        <script src="../js/contextmenus.js"></script>
+        <script src="../js/browserDependent_functions.js"></script>
 
 
     </head>
