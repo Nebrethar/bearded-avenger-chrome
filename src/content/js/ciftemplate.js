@@ -32,14 +32,7 @@ document.getElementById("template").innerHTML = `
                     <li><a href="submit.html"` + document.getElementById("target").innerHTML + `>Submit</a></li>
                     <li><a href="search.html"` + document.getElementById("target").innerHTML + `>Search</a><li>
                     <li><a href="settings.html"` + document.getElementById("target").innerHTML + `>Settings</a></li>
-                    <li>
-                        <form class="navbar-form" action="search.html" method="GET" id="searchForm">
-                            <div class="form-group">
-                                <input type="text" placeholder="Domain (example.com)" class="form-control" name="q" id="q" size="72">
-                            </div>
-                            <button class="btn btn-default" id="btnSearch">Quick Search</button>
-                        </form>
-                    </li>
+                    <li> ` + document.getElementById("searchnav").innerHTML + ` </li>
                 </ul>
             </div>
         </nav>
