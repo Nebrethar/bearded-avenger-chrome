@@ -144,6 +144,7 @@ $(document).ready(function() {
         "searching": false
     });
 
+
     // Setup the ajax indicator
     $('#results').append('<div id="ajaxBusy"><p><img src="../images/ajax-loader.gif"></p></div>');
 
@@ -153,7 +154,7 @@ $(document).ready(function() {
     });
 
     t.fnClearTable();
-
+    
     q = false;
 
     var nolog = 0;
@@ -179,6 +180,14 @@ $(document).ready(function() {
         data['q'] = q;
         search(data);
     }
+
+    $('#searchFormNav').submit(function(e){
+          if(q > 0){
+              data = {};
+              data['q'] = q;
+              search(data);
+          }
+    });
 
     $('#searchForm').submit(function(e){
         e.preventDefault();
