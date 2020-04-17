@@ -23,8 +23,15 @@
               <h4 style="text-align:right;">Hover over the input boxes for more details</h4>
               <div class="form-group input-group-lg">
                   <label for="Domain"><Strong>Domain:<Strong/></label>
-                  <input class="form-control" type="text" placeholder="example.com" id="indicator" name="indicator"
+                  <input class="form-control" type="text" placeholder="domain name or IP address" id="indicator" name="indicator"
                   title="Domain name or IPv4 address">
+              </div>
+              <div class="form-group input-group-lg">
+                  <label for="IP Version" title="IP type used by threat (ipv4 or ipv6)"><Strong>Protocol:<Strong/></label>
+                  <radio id="itype" name="itype" ><br>
+                    <input type="radio" name="itype" value="ipv4"> IPv4
+                    <input type="radio" name="itype" value="ipv6"> IPv6<br>
+                  </radio>
               </div>
               <div class="form-group input-group-lg">
                   <label for="Tags"><Strong>Tags:<Strong/></label>
@@ -43,13 +50,6 @@
                   <label for="Description"><Strong>Description:<Strong/></label>
                   <input class="form-control" type="text" placeholder="short description" id="description" name="description"
                   title="Explanation of the threat and reason for action">
-              </div>
-              <div class="form-group input-group-lg">
-                  <label for="IP Version" title="IP type used by threat (ipv4 or ipv6)"><Strong>Protocol:<Strong/></label>
-                  <radio id="itype" name="itype"><br>
-                    <input type="radio" name="itype" value="ipv4"> IPv4<br>
-                    <input type="radio" name="itype" value="ipv6"> IPv6<br>
-                  </radio>
               </div>
               <!--
               <div class="form-group input-group-lg">

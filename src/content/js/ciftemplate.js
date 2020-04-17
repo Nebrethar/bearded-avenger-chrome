@@ -16,6 +16,7 @@ document.getElementById("template").innerHTML = `
         <script src="../js/common.js"></script>
         <script src="../js/contextmenus.js"></script>
         <script src="../js/browserDependent_functions.js"></script>
+        <script src="../js/search.js"></script>
 
 
     </head>
@@ -27,10 +28,18 @@ document.getElementById("template").innerHTML = `
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" style="display:inline;">
                     <li><a href="submit.html"` + document.getElementById("target").innerHTML + `>Submit</a></li>
                     <li><a href="search.html"` + document.getElementById("target").innerHTML + `>Search</a><li>
                     <li><a href="settings.html"` + document.getElementById("target").innerHTML + `>Settings</a></li>
+                    <li>
+                        <form class="navbar-form" action="search.html" method="GET" id="searchForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Domain (example.com)" class="form-control" name="q" id="q" size="72">
+                            </div>
+                            <button class="btn btn-default" id="btnSearch">Quick Search</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </nav>

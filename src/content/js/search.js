@@ -177,7 +177,6 @@ $(document).ready(function() {
     if(q){
         data = {};
         data['q'] = q;
-        data['confidence'] = '5';
         search(data);
     }
 
