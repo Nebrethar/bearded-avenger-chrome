@@ -10,6 +10,7 @@
   <script src="../js/common.js"></script>
   <script src="../js/contextmenus.js"></script>
   <script src="../js/browserDependent_functions.js"></script>
+  <link rel="stylesheet" href="../css/home.css">
 
 </head>
 <div id="template"></div>
@@ -71,28 +72,47 @@
             The CIF databsae fields are used to submit and view data in the CIF database.
             <br>
             <strong>Each field has a unique function, explained here:</strong><br><br>
-            <div class="homecol" style="width:20%;">
-              <h4 class="descriptor"><strong>Domain:</strong> </h4>
-              <h4 class="descriptor"><strong>Tags:</strong> </h4>
-              <h4 class="descriptor"><strong>Description:</strong> </h4>
-              <h4 class="descriptor"><strong>Protocol:</strong> </h4>
-              <h4 class="descriptor"><strong>Provider:</strong> </h4>
-              <h4 class="descriptor"><strong>Severity:</strong><br><br></h4>
-              <h4 class="descriptor"><strong>Confidence:</strong></h4>
-              <h4 class="" style="margin-bottom:0px;"><strong>Threat Group:</strong><br><br> </h4>
-              <h4 class="descriptor" style="margin-top:0px;"><strong>NOTE:</strong></h4>
-            </div>
-            <div class="homecol">
-              <h4 class="descriptor rightb">Domain name or IPv4 address</h4>
-              <h4 class="descriptor rightb">Set manually in the submission process to classify threats </h4>
-              <h4 class="descriptor rightb">Explanation of the threat and reason for action </h4>
-              <h4 class="descriptor rightb">itype used by threat (IPv4 or IPv6) </h4>
-              <h4 class="descriptor rightb">Organizational source of the submission (URL) </h4>
-              <h4 class="descriptor rightb">In order from least severe to most severe:<br>(WHITE, GREEN, AMBER, RED) </h4>
-              <h4 class="descriptor rightb">Submitter's confidence in the validity of the submission (1-4) </h4>
-              <h4 class="rightb" style="margin-bottom:0px;">Associated threat group<br><br> </h4>
-              <h4 class="descriptor rightb" style="margin-top:0px;">If no database connections are defined, the GROUP box will be empty. </h4>
-            </div>
+            <table id="fields">
+              <tbody>
+                <tr>
+                  <th class="first">Field</th>
+                  <th class="second">Description</th>
+                </tr>
+                <tr>
+                  <td class="first">Domain</td>
+                  <td class="second">Domain name or IPv4 address</td>
+                </tr>
+                <tr>
+                  <td class="first">Tags</td>
+                  <td class="second">Set manually in the submission process to classify threats</td>
+                </tr>
+                <tr>
+                  <td class="first">Description</td>
+                  <td class="second">Explanation of the threat and reason for action</td>
+                </tr>
+                <tr>
+                  <td class="first">Protocol</td>
+                  <td class="second">itype used by threat (IPv4 or IPv6)</td>
+                </tr>
+                <tr>
+                  <td class="first">Provider</td>
+                  <td class="second">Organizational source of the submission (URL)</td>
+                </tr>
+                <tr>
+                  <td class="first">Severity</td>
+                  <td class="second">In order from least severe to most severe:
+  (WHITE, GREEN, AMBER, RED)</td>
+                </tr>
+                <tr>
+                  <td class="first">Confidence</td>
+                  <td class="second">Submitter's confidence in the validity of the submission (1-4)</td>
+                </tr>
+                <tr>
+                  <td class="first">Threat Group</td>
+                  <td class="second">Associated threat group</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </h4>
       </div>
@@ -126,23 +146,34 @@
         <br><br>
         Below is a detailed explanation for each required field.<br><br>
       </h4>
-      <h4>
-        <div class="homerow">
-          <div class="homecol" style="width:20%;">
-            <h4 class="descriptor"><strong>Name:</strong> </h4>
-            <h4 class="descriptor"><strong>API Location:</strong> </h4>
-            <h4 class="descriptor"><strong>Token:</strong> </h4>
-            <h4 class="descriptor"><strong>Groups:</strong> </h4>
-            <h4 class="descriptor"><strong>Provider:</strong> </h4>
-          </div>
-          <div class="homecol">
-            <h4 class="descriptor rightb">Personal identifier for the connection </h4>
-            <h4 class="descriptor rightb">Destination in URL format </h4>
-            <h4 class="descriptor rightb">Token provided by CIF backend</h4>
-            <h4 class="descriptor rightb">Connection group for organization</h4>
-            <h4 class="descriptor rightb">Organization name</h4>
-        </div>
-      </h4>
+      <table id="fields">
+        <tbody>
+          <tr>
+            <th class="first">Field</th>
+            <th class="second">Description</th>
+          </tr>
+          <tr>
+            <td class="first">Name</td>
+            <td class="second">Personal identifier for the connection</td>
+          </tr>
+          <tr>
+            <td class="first">API Location</td>
+            <td class="second">Destination in URL format</td>
+          </tr>
+          <tr>
+            <td class="first">Token</td>
+            <td class="second">Token provided by CIF backend</td>
+          </tr>
+          <tr>
+            <td class="first">Groups</td>
+            <td class="second">Connection group for organization</td>
+          </tr>
+          <tr>
+            <td class="first">Provider</td>
+            <td class="second">Organization name</td>
+          </tr>
+        </tbody>
+      </table>
       <h2>
         Search
       </h2>
@@ -154,13 +185,23 @@
             Two additional fields exist for the Search page:
             <br><br>
             <div class="homecol" style="width:20%;">
-            <h4 class="descriptor"><strong>Timestamp:</strong> </h4>
-            <h4 class="descriptor"><strong>Count:</strong> </h4>
           </div>
-          <div class="homecol">
-            <h4 class="descriptor rightb">Date and time of data submission</h4>
-            <h4 class="descriptor rightb">Number of occurrences in the database</h4>
-        </div>
+          <table id="fields">
+            <tbody>
+              <tr>
+                <th class="first">Field</th>
+                <th class="second">Description</th>
+              </tr>
+              <tr>
+                <td class="first">Timestamp</td>
+                <td class="second">Date and time of data submission</td>
+              </tr>
+              <tr>
+                <td class="first">Count</td>
+                <td class="second">Number of occurrences in the database</td>
+              </tr>
+            </tbody>
+          </table>
       </h4>
       <br><br>
       </div>
