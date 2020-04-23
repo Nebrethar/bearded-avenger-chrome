@@ -34,9 +34,11 @@
                             </select>
                         <input type="text" placeholder="Provider" class="form-control" name="provider" id="provider">
                         <input type="text" placeholder="Group" class="form-control" name="groups" id="groups">
-                        <input type="text" placeholder="Tags" class="form-control" name="tags" id="tags">
                         <input type="date" class="form-control" name="reporttime">
+                        <thead><th>*Optional</th></thread>
                     </div>
+                    <br>
+                    <input type="text" placeholder="Tags" class="form-control" name="tags" id="tags">
                     <radio id="itype" name="itype" title="IP type used by threat (ipv4, ipv6 or any for all)."
                     style="display:inline-block; margin-top:20px;">
                         <br>
@@ -46,6 +48,7 @@
                       </radio>
 
                     <button class="btn btn-default" id="btnSearch">Search</button>
+                    <thead><th>*Required</th></thread>
                 </form>
   <div class="row">
       <div class="col-md-12">
