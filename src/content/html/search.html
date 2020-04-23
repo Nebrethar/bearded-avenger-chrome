@@ -24,31 +24,32 @@
       <h1>Search</h1>
   </div>
   <form class="navbar-form" action="" method="POST" id="searchForm" style="padding-left:0px;">
-                    <div class="form-group" style="display:inline-block;">
-                        <select class="form-control" id="confidence" name="confidence">
-                                <option value="11"  selected="1">Any Confidence</option>
-                                <option value="1">Confidence Level 1</option>
-                                <option value="2">Confidence Level 2</option>
-                                <option value="3">Confidence Level 3</option>
-                                <option value="4">Confidence Level 4</option>
-                            </select>
-                        <input type="text" placeholder="Provider" class="form-control" name="provider" id="provider">
-                        <input type="text" placeholder="Group" class="form-control" name="groups" id="groups">
-                        <input type="date" class="form-control" name="reporttime">
-                        <thead><th>*Optional</th></thread>
+                    <div style="display:inline-block;width:880px;">
+                      <div class="form-group" style="display:inline-block;">
+                          <select class="form-control" id="confidence" name="confidence">
+                                  <option value="11"  selected="1">Any Confidence</option>
+                                  <option value="1">Confidence Level 1</option>
+                                  <option value="2">Confidence Level 2</option>
+                                  <option value="3">Confidence Level 3</option>
+                                  <option value="4">Confidence Level 4</option>
+                              </select>
+                          <input type="text" placeholder="Provider" class="form-control" name="provider" id="provider">
+                          <input type="text" placeholder="Group" class="form-control" name="groups" id="groups">
+                          <input type="date" class="form-control" name="reporttime">
+                          <p style="margin-left:20px;width:60px;display:inline-block">*Optional</p>
+                      </div>
+                      <br>
+                      <input type="text" placeholder="Tags" class="form-control" name="tags" id="tags">
+                      <radio id="itype" name="itype" title="IP type used by threat (ipv4, ipv6 or any for all)."
+                      style="display:inline-block; margin:20px 0px 0px 20px;">
+                          <br>
+                          <input type="radio" name="itype" value="any" checked> Any itype
+                          <input type="radio" name="itype" value="ipv4"> IPv4
+                          <input type="radio" name="itype" value="ipv6"> IPv6
+                        </radio>
+                      <p style="margin-left:20px;width:100px;display:inline-block">*Required</p>
+                      <button class="btn btn-default" id="btnSearch" style="float:right;margin-top:30px;">Search</button>
                     </div>
-                    <br>
-                    <input type="text" placeholder="Tags" class="form-control" name="tags" id="tags">
-                    <radio id="itype" name="itype" title="IP type used by threat (ipv4, ipv6 or any for all)."
-                    style="display:inline-block; margin-top:20px;">
-                        <br>
-                        <input type="radio" name="itype" value="any" checked> Any itype
-                        <input type="radio" name="itype" value="ipv4"> IPv4
-                        <input type="radio" name="itype" value="ipv6"> IPv6
-                      </radio>
-
-                    <button class="btn btn-default" id="btnSearch">Search</button>
-                    <thead><th>*Required</th></thread>
                 </form>
   <div class="row">
       <div class="col-md-12">
